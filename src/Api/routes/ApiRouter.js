@@ -4,13 +4,10 @@ import { RedirectController } from "../controllers/RedirectController.js";
 export class ApiRouter {
 
     static #controller = ApiController.controllers;
-    static #redirectsController = RedirectController.controllers;
 
     getApi(router) {
 
         return router
-            // Contacto
-            .get('/contacto', ApiRouter.#redirectsController.goContacto)
 
             // Productos
             .get('/prod', ApiRouter.#controller.irIndex)
